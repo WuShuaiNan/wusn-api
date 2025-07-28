@@ -39,7 +39,7 @@
         <zookeeper.version>3.8.4</zookeeper.version>
         <yaml.version>2.0</yaml.version>
         <hibernate.version>5.4.24.Final</hibernate.version>
-        <hibernate-validator.version>6.0.21.Final</hibernate-validator.version>
+        <hibernate-validator.version>6.2.0.Final</hibernate-validator.version>
         <el.version>3.0.0</el.version>
         <fastjson.version>1.2.83</fastjson.version>
         <mapstruct.version>1.5.3.Final</mapstruct.version>
