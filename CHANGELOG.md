@@ -17,6 +17,7 @@
 - 新增依赖 rbac 的版本为 1.8.4.a
 - 新增接口登录验证功能
 - 新增依赖 wusn-video 的版本为 1.0.1.a
+- 新增 RtspController
 
 #### Bug修复
 

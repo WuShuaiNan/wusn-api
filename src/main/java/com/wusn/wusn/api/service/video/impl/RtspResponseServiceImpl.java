@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class RtspResponseServiceImpl implements RtspResponseService {
 
-    @DubboReference
+    @DubboReference(group = "${dubbo.rbac.group}")
     private RtspMaintainService service;
 
     @Override
