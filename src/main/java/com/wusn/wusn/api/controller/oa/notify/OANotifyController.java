@@ -1,5 +1,6 @@
 package com.wusn.wusn.api.controller.oa.notify;
 
+import com.wusn.wusn.api.annotation.LoginValidated;
 import com.wusn.wusn.api.bean.entity.common.JacksonResponse;
 import com.wusn.wusn.api.bean.entity.oa.notify.JacksonOANotifyResponse;
 import com.wusn.wusn.api.bean.entity.oa.notify.WebInputOANotify;
@@ -24,6 +25,7 @@ public class OANotifyController {
     private OANotifyService oaNotifyService;
 
     @PostMapping("/notify")
+    @LoginValidated
     public JacksonResponse JacksonOANotifyResponse (
             @RequestBody WebInputOANotify request
     ) {

@@ -2,6 +2,7 @@ package com.wusn.wusn.api.controller.cbs;
 
 import com.dwarfeng.sfds.stack.service.LongIdService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.wusn.wusn.api.annotation.LoginValidated;
 import com.wusn.wusn.api.bean.entity.cbs.JacksonPaymentResponse;
 import com.wusn.wusn.api.service.cbs.CBSHttpService;
 import lombok.extern.slf4j.Slf4j;
@@ -36,6 +37,7 @@ public class CBSHttpController {
     private String paymentURL;
 
     @PostMapping("/payment-apply-common")
+    @LoginValidated
     public JacksonPaymentResponse paymentApplyCommon(
             @RequestBody Map<String, Object> map
     ) {

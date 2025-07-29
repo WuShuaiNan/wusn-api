@@ -5,13 +5,11 @@ import com.wusn.wusn.api.bean.entity.gsm.JacksonGSMResponse;
 import com.wusn.wusn.api.bean.entity.gsm.JacksonSmsInfo;
 import com.wusn.wusn.api.service.gsm.GSMService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Objects;
 
 @Slf4j
 @RestController
@@ -22,12 +20,6 @@ public class GSMController {
     public GSMController(GSMService gsmService) {
         this.gsmService = gsmService;
     }
-
-    @Value("${app.gsm.token.key}")
-    private String tokenKey;
-
-    @Value("${app.gsm.token.value}")
-    private String tokenValue;
 
     /**
      * 发送短信。
@@ -42,24 +34,16 @@ public class GSMController {
     ) {
         try {
             JacksonResponse response = new JacksonResponse();
-            if (Objects.equals(tokenValue, request.getHeader(tokenKey))) {
-                JacksonGSMResponse gsmResponse = gsmService.sentMessage(smsInfo);
-                response.setData(gsmResponse);
-                if (gsmResponse.getSuccessFlag()){
-                    response.setCode("200");
-                    response.setMessage("GSM短信发送成功！");
-                } else {
-                    response.setCode("500");
-                    response.setMessage("GSM短信发送失败！");
-                }
-                return response;
+            JacksonGSMResponse gsmResponse = gsmService.sentMessage(smsInfo);
+            response.setData(gsmResponse);
+            if (gsmResponse.getSuccessFlag()){
+                response.setCode("200");
+                response.setMessage("GSM短信发送成功！");
             } else {
-                return new JacksonResponse(
-                        null,
-                        "500",
-                        "GSM短信接口认证失败！"
-                );
+                response.setCode("500");
+                response.setMessage("GSM短信发送失败！");
             }
+                return response;
         } catch (Exception e){
             return new JacksonResponse(
                     e.getMessage(),
