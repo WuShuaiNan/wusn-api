@@ -427,9 +427,9 @@
             <version>${wusn-video.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.dwarfeng</groupId>
-            <artifactId>rbac-distributed-service-sdk</artifactId>
-            <version>${rbac.version}</version>
+            <groupId>com.wusn</groupId>
+            <artifactId>wusn-video-sdk</artifactId>
+            <version>${wusn-video.version}</version>
         </dependency>
     </dependencies>
 
