@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class PermissionGroupResponseServiceImpl implements PermissionGroupResponseService {
 
-    @DubboReference
+    @DubboReference(group = "${dubbo.wusn.video.group}")
     private PermissionGroupMaintainService service;
 
     @Override

@@ -17,10 +17,10 @@ import java.util.stream.Collectors;
 @Service
 public class RoleResponseServiceImpl implements RoleResponseService {
 
-    @DubboReference
+    @DubboReference(group = "${dubbo.rbac.group}")
     private RoleMaintainService service;
-    
-    @DubboReference
+
+    @DubboReference(group = "${dubbo.rbac.group}")
     private UserMaintainService userMaintainService;
 
     @Override

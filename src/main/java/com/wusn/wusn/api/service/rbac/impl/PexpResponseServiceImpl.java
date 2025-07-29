@@ -17,10 +17,10 @@ import java.util.List;
 @Service
 public class PexpResponseServiceImpl implements PexpResponseService {
 
-    @DubboReference
+    @DubboReference(group = "${dubbo.rbac.group}")
     private PexpMaintainService service;
-    
-    @DubboReference
+
+    @DubboReference(group = "${dubbo.snowflake.group}")
     private LongIdService longIdService;
 
     @Override

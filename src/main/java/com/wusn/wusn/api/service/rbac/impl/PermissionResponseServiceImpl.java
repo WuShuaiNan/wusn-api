@@ -20,13 +20,13 @@ import java.util.stream.Collectors;
 @Service
 public class PermissionResponseServiceImpl implements PermissionResponseService {
 
-    @DubboReference
+    @DubboReference(group = "${dubbo.rbac.group}")
     private PermissionMaintainService service;
 
-    @DubboReference
+    @DubboReference(group = "${dubbo.acckeeper.group}")
     private LoginService loginService;
 
-    @DubboReference
+    @DubboReference(group = "${dubbo.rbac.group}")
     private PermissionLookupService permissionLookupService;
 
     @Override

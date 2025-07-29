@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class LoginResponseServiceImpl implements LoginResponseService {
 
-    @DubboReference
+    @DubboReference(group = "${dubbo.acckeeper.group}")
     private LoginService loginService;
 
     @Override

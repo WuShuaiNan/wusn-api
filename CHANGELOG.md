@@ -18,6 +18,7 @@
 - 新增接口登录验证功能
 - 新增依赖 wusn-video 的版本为 1.0.1.a
 - 新增 RtspController
+- 新增 dubbo 服务分组功能
 
 #### Bug修复
 

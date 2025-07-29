@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserResponseServiceImpl implements UserResponseService {
 
-    @DubboReference
+    @DubboReference(group = "${dubbo.rbac.group}")
     private UserMaintainService service;
     @Override
     public boolean exists(StringIdKey key) throws ServiceException {

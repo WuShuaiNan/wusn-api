@@ -15,10 +15,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class AccountOperateResponseServiceImpl implements AccountOperateResponseService {
 
-    @DubboReference
+    @DubboReference(group = "${dubbo.acckeeper.group}")
     private AccountOperateService service;
 
-    @DubboReference
+    @DubboReference(group = "${dubbo.acckeeper.group}")
     private AccountMaintainService accountMaintainService;
 
     @Override
