@@ -15,7 +15,7 @@
     <artifactId>wusn-api</artifactId>
     <version>1.0.0.a-SNAPSHOT</version>
     <name>wusn-api</name>
-    <url>http://www.jiermt.com</url>
+    <url>http://www.wusn.com</url>
     <description>wusn-api</description>
     <packaging>war</packaging>
 
@@ -51,6 +51,8 @@
         <commons-io.version>2.14.0</commons-io.version>
         <javacv.version>1.5.7</javacv.version>
         <jserialcomm.version>2.9.2</jserialcomm.version>
+        <acckeeper.version>1.8.2.a</acckeeper.version>
+        <rbac.version>1.8.4.a</rbac.version>
         <!--  Maven插件版本号  -->
         <maven-resources-plugin.version>2.4.3</maven-resources-plugin.version>
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
@@ -394,6 +396,28 @@
             <groupId>com.fazecast</groupId>
             <artifactId>jSerialComm</artifactId>
             <version>${jserialcomm.version}</version>
+        </dependency>
+        <!-- AcckeeperMapper -->
+        <dependency>
+            <groupId>com.dwarfeng</groupId>
+            <artifactId>account-keeper-stack</artifactId>
+            <version>${acckeeper.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dwarfeng</groupId>
+            <artifactId>account-keeper-sdk</artifactId>
+            <version>${acckeeper.version}</version>
+        </dependency>
+        <!-- RbacMapper -->
+        <dependency>
+            <groupId>com.dwarfeng</groupId>
+            <artifactId>rbac-distributed-service-stack</artifactId>
+            <version>${rbac.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dwarfeng</groupId>
+            <artifactId>rbac-distributed-service-sdk</artifactId>
+            <version>${rbac.version}</version>
         </dependency>
     </dependencies>
 
