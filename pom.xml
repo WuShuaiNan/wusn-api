@@ -53,6 +53,7 @@
         <jserialcomm.version>2.9.2</jserialcomm.version>
         <acckeeper.version>1.8.2.a</acckeeper.version>
         <rbac.version>1.8.4.a</rbac.version>
+        <wusn-video.version>1.0.1.a</wusn-video.version>
         <!--  Maven插件版本号  -->
         <maven-resources-plugin.version>2.4.3</maven-resources-plugin.version>
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
@@ -397,7 +398,7 @@
             <artifactId>jSerialComm</artifactId>
             <version>${jserialcomm.version}</version>
         </dependency>
-        <!-- AcckeeperMapper -->
+        <!-- Acckeeper -->
         <dependency>
             <groupId>com.dwarfeng</groupId>
             <artifactId>account-keeper-stack</artifactId>
@@ -408,11 +409,22 @@
             <artifactId>account-keeper-sdk</artifactId>
             <version>${acckeeper.version}</version>
         </dependency>
-        <!-- RbacMapper -->
+        <!-- RBAC -->
         <dependency>
             <groupId>com.dwarfeng</groupId>
             <artifactId>rbac-distributed-service-stack</artifactId>
             <version>${rbac.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dwarfeng</groupId>
+            <artifactId>rbac-distributed-service-sdk</artifactId>
+            <version>${rbac.version}</version>
+        </dependency>
+        <!-- wusn-video -->
+        <dependency>
+            <groupId>com.wusn</groupId>
+            <artifactId>wusn-video-stack</artifactId>
+            <version>${wusn-video.version}</version>
         </dependency>
         <dependency>
             <groupId>com.dwarfeng</groupId>
