@@ -10,13 +10,13 @@ import java.io.OutputStream;
 @Service
 public class RtspToFlvServiceImpl implements RtspToFlvService {
 
-    public void rtspToFlv(String rtspUrl, HttpServletResponse response) {
+    public void rtspToFlv(String rtspUrl, int width, int height, HttpServletResponse response) {
         response.setContentType("video/x-flv");
         response.setHeader("Connection", "keep-alive");
         response.setHeader("Cache-Control", "no-cache");
 
         try (OutputStream outputStream = response.getOutputStream()) {
-            FFmpegUtil.convertRtspToFlv(rtspUrl, outputStream);
+            FFmpegUtil.convertRtspToFlv(rtspUrl, width, height, outputStream);
         } catch (Exception e) {
             throw new RuntimeException("Error streaming RTSP to FLV", e);
         }

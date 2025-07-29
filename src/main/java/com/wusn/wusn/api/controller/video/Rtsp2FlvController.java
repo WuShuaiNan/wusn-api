@@ -23,8 +23,13 @@ public class Rtsp2FlvController {
     private RtspToFlvService rtspToFlvService;
 
     @GetMapping("/rtsp2flv")
-    public void stream(@RequestParam String rtspUrl, HttpServletResponse response) {
-        rtspToFlvService.rtspToFlv(rtspUrl, response);
+    public void rtsp2flv(
+            @RequestParam String rtspUrl,
+            @RequestParam int width,
+            @RequestParam int height,
+            HttpServletResponse response
+    ) {
+        rtspToFlvService.rtspToFlv(rtspUrl, width, height, response);
     }
 
 }
