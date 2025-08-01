@@ -1,6 +1,5 @@
 package com.wusn.wusn.api.controller.video;
 
-import com.wusn.wusn.api.annotation.LoginValidated;
 import com.wusn.wusn.api.service.video.RtspToFlvService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +23,6 @@ public class Rtsp2FlvController {
     private RtspToFlvService rtspToFlvService;
 
     @GetMapping("/rtsp2flv")
-    @LoginValidated
     public void rtsp2flv(
             @RequestParam String rtspUrl,
             @RequestParam int width,
