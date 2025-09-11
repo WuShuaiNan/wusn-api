@@ -391,6 +391,25 @@
             <groupId>org.bytedeco</groupId>
             <artifactId>javacv-platform</artifactId>
             <version>${javacv.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.bytedeco</groupId>
+                    <artifactId>opencv-platform</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.bytedeco</groupId>
+                    <artifactId>openblas-platform</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.bytedeco</groupId>
+                    <artifactId>ffmpeg-platform</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>ffmpeg-platform</artifactId>
+            <version>5.0-1.5.7</version>
         </dependency>
         <!-- JSerialComm -->
         <dependency>
